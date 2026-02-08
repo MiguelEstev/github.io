@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Estevam — Python Dev</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" aria-label="Alternar Tema">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+    </button>
+    <!-- Blue Mode Toggle -->
+    <button id="blue-mode-toggle" aria-label="Modo Oceano Profundo" title="Modo Blue">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+        </svg>
+    </button>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-circle"></div>
+
+    </div>
+
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="loader-content">
+            <h2 class="loader-name">
+                <span>M</span><span>i</span><span>g</span><span>u</span><span>e</span><span>l</span>
+            </h2>
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <a href="#" class="nav-logo">Miguel.</a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link hoverable">Sobre</a>
+            <a href="#projects" class="nav-link hoverable">Projetos</a>
+            <a href="#contact" class="nav-link hoverable">Contato</a>
+        </div>
+        <div class="nav-contact">
+            <div class="nav-contact-dot"></div>
+            <span>Disponível</span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <!-- HERO DECORATION (Canvas Blob) -->
+        <canvas id="hero-blob" class="hero-decoration hero-circle"></canvas>
+
+
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="hero-eyebrow-text">DESENVOLVEDOR PYTHON E PROFISSIONAL EM AUTOMAÇÕES</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="hero-title-line"><span>Criando</span></span>
+                <span class="hero-title-line"><span class="italic">soluções</span> <span
+                        class="outline">inteligentes</span></span>
+                <span class="hero-title-line"><span>com Python.</span></span>
+            </h1>
+
+            <div class="hero-bottom">
+                <p class="hero-description">
+                    Transformando processos complexos e manuais em fluxos lógicos e automatizados. Foco total em
+                    resolver o problema da forma mais limpa possível.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-rounded hoverable">
+                        <span class="btn-text">Ver Projetos</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <div class="marquee-item">Python <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">Automação <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">Javascript <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">Web Scraping <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">N8N <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">SQL <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">APIs REST <div class="marquee-dot"></div>
+                </div>
+            </div>
+            <!-- Duplicated for seamless loop -->
+            <div class="marquee-content">
+                <div class="marquee-item">Python <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">Automação <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">Javascript <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">Web Scraping <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">N8N <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">SQL <div class="marquee-dot"></div>
+                </div>
+                <div class="marquee-item">APIs REST <div class="marquee-dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-grid">
+                <!-- Left: Intro -->
+                <div class="about-intro">
+                    <span class="section-number">(01) — Sobre</span>
+                    <h2 class="about-title">Lógica, Código <br>e <span class="italic">Resolução</span></h2>
+
+                    <div class="about-role-card">
+                        <div class="role-icon">
+                            <i class="ph ph-student"></i>
+                        </div>
+                        <div class="role-text">
+                            <strong>18 anos</strong>
+                            <span>Estudante Fatec SP</span>
+                        </div>
+                    </div>
+
+                    <p class="about-text">
+                        Tenho 18 anos e estudo Análise e Desenvolvimento de Sistemas na FATEC-SP. Minha experiência
+                        começou com hardware (montagem, manutenção e diagnóstico de computadores). Essa bagagem técnica
+                        me fez entrar na Área de Tecnologia, passando para a parte de software com o Python e fluxos de
+                        automação que ligam diferentes sistemas, sempre buscando a forma mais lógica e limpa de resolver
+                        algum problema.
+                    </p>
+                </div>
+
+                <!-- Middle: Visual Decoration -->
+                <div class="about-visual">
+                    <div class="visual-circle-soft">
+                        <div class="circle-inner"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Highlights -->
+                <div class="about-highlights-list">
+                    <div class="highlight-item-soft">
+                        <div class="item-icon">
+                            <i class="ph ph-lightning"></i>
+                        </div>
+                        <div class="item-content">
+                            <h4>Python Expert</h4>
+                            <p>114+ horas de curso e prática constante.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-item-soft">
+                        <div class="item-icon">
+                            <i class="ph ph-robot"></i>
+                        </div>
+                        <div class="item-content">
+                            <h4>Automação</h4>
+                            <p>N8N, Selenium e Scripts Customizados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+        <div class="projects-container">
+            <div class="projects-header">
+                <h2 class="projects-title reveal">Trabalhos <span class="italic">Selecionados</span></h2>
+            </div>
+
+            <div class="projects-list">
+                <!-- Project 1 -->
+                <div class="project-item reveal hoverable" data-title="Automação de Vendas B2B"
+                    data-desc="Desenvolvi um robô que automatiza o atendimento via WhatsApp. Ele consulta o estoque em tempo real, calcula orçamentos e responde o cliente instantaneamente. Isso eliminou o trabalho manual repetitivo da equipe de vendas."
+                    data-image="./wokeflow.png" data-tags="Python, N8N, WhatsApp API">
+                    <span class="project-index">01</span>
+                    <div class="project-info">
+                        <h3 class="project-title">Automação de Vendas B2B</h3>
+                        <p class="project-desc">Robô de vendas e orçamentos via WhatsApp.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">N8N</span>
+                        </div>
+                    </div>
+                    <div class="project-link project-trigger">Ver Projeto</div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-item reveal hoverable" data-title="Atendimento IA & Dashboards"
+                    data-desc="Sistema de atendimento automático para escritórios de investimento. A IA responde dúvidas consultando um RAG (baseado em documentos do BTG) e gera dashboards com métricas de aprovação das respostas e principais dúvidas dos clientes. Também inclui um sistema de handoff para passar o atendimento ao assessor quando necessário."
+                    data-image="./dashboard.jfif" data-tags="AI/RAG, Dashboards, Python">
+                    <span class="project-index">02</span>
+                    <div class="project-info">
+                        <h3 class="project-title">IA para Investimentos</h3>
+                        <p class="project-desc">RAG inteligente, Dashboards de métricas e Handoff.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">IA</span>
+                            <span class="project-tag">RAG</span>
+                        </div>
+                    </div>
+                    <div class="project-link project-trigger">Ver Projeto</div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-item reveal hoverable" data-title="Gestão de Fichas Médicas"
+                    data-desc="Uma aplicação web completa para organizar o histórico de pacientes e suas fichas médicas, digitalizando todo o processo de criação de fichas que antes era manual. O sistema garante acesso rápido e organizado às informações."
+                    data-image="./itetuto foto.png" data-tags="Supabase, Javascript, Typescript">
+                    <span class="project-index">03</span>
+                    <div class="project-info">
+                        <h3 class="project-title">Sistema de Fichas Médicas</h3>
+                        <p class="project-desc">Aplicação web Full para gestão de pacientes.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Supabase</span>
+                            <span class="project-tag">Typescript</span>
+                        </div>
+                    </div>
+                    <div class="project-link project-trigger">Ver Projeto</div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-item reveal hoverable" data-title="Monitoramento de Câmbio"
+                    data-desc="Monitoramento de Câmbio: Scripts em Python que coletam cotações diariamente (Web Scraping), processam os dados com Pandas e geram relatórios de volatilidade para análise financeira."
+                    data-image="" data-tags="Python, Web Scraping, Pandas">
+                    <span class="project-index">04</span>
+                    <div class="project-info">
+                        <h3 class="project-title">Monitoramento Financeiro</h3>
+                        <p class="project-desc">Coleta e análise automática de dados de câmbio.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Scraping</span>
+                        </div>
+                    </div>
+                    <div class="project-link project-trigger">Ver Projeto</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-eyebrow">
+                <span class="dot-indicator"></span><span class="mono-text">DISPONÍVEL</span>
+            </div>
+            <h2 class="contact-title">Vamos criar o <br><span class="serif-italic">futuro</span> juntos.</h2>
+            <div class="contact-links-grid">
+                <a href="mailto:miguel.azevedo1218@gmail.com" class="contact-item hoverable">
+                    <span class="label">Email</span>
+                    <span class="value">miguel.azevedo1218@gmail.com</span>
+                    <i class="ph ph-envelope-simple"></i>
+                </a>
+
+                <a href="https://wa.me/5511954878236" target="_blank" rel="noopener noreferrer"
+                    class="contact-item hoverable">
+                    <span class="label">WhatsApp</span>
+                    <span class="value">+55 (11) 95487-8236</span>
+                    <i class="ph ph-whatsapp-logo"></i>
+                </a>
+
+                <a href="https://github.com/MiguelEstev" target="_blank" rel="noopener noreferrer"
+                    class="contact-item hoverable">
+                    <span class="label">Social</span>
+                    <span class="value">GitHub</span>
+                    <i class="ph ph-github-logo"></i>
+                </a>
+            </div>
+            <footer class="footer-minimal">
+                <div>© 2026 Miguel Estevam.</div>
+            </footer>
+        </div>
+    </section>
+
+    <!-- PROJECT SHEET (OFF-CANVAS) -->
+    <div class="project-sheet-overlay"></div>
+    <aside class="project-sheet">
+        <div class="sheet-header">
+            <button class="sheet-close" aria-label="Close Project Details">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+        <div class="sheet-content">
+            <h2 class="sheet-title">Nome do Projeto</h2>
+            <div class="sheet-meta">
+                <!-- Tags inserted via JS -->
+            </div>
+            <div class="sheet-image-container">
+                <img src="" alt="Project Preview" class="sheet-image">
+            </div>
+            <div class="sheet-body">
+                <p class="sheet-description">Descrição do projeto...</p>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- Core Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="./luxury.js"></script>
+</body>
+
+</html>
